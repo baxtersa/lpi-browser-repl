@@ -1,0 +1,16 @@
+html, head, body {
+    padding: 0;
+    margin: 0;
+}
+
+#editor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom: 0;
+}
+
+.CodeMirror {
+    height: 100%;
+}

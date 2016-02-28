@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DepuTy Editor</title>
+    <!-- Create a simple CodeMirror instance -->
+    <link rel="stylesheet" href="src/codemirror-5.12/lib/codemirror.css">
+    <link rel="stylesheet" href="src/codemirror-5.12/theme/material.css">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/editor.css">
+    <script src="src/codemirror-5.12/lib/codemirror.js"></script>
+    <script src="src/codemirror-5.12/addon/mode/simple.js"></script>
+    <script src="src/JS/elm.js"></script>
+    <script src="src/JS/editor.js"></script>
+    <script src="src/JS/lpi_mode.js"></script>
+  </head>
+  <body>
+    <form id="inputForm" action="http://0.0.0.0:8000/compile" method="post" target="output">
+      <div id="controls"></div>
+      <div id="editor">
+        <textarea id="code" name="code" display="none">
+let fnMap : pi typ:~.pi func:typ.typ =
+	fn typ:~.(fn x:typ.x);;
+    
+let intID : pi x:int.int = fnMap int;;
+intID 7;;
+
+let boolID : pi x:bool.bool = fnMap bool;;
+boolID false;;
+
+let y:int = 9;;
+
+let fnFV : pi x:int.int = fn x:int.intID x + y;;
+fnFV 13;;
+
+let y:int = 12;;
+fnFV 13;;</textarea>
+      </div>
+    </form>
+    <script type="text/javascript">initEditor();</script>
+  </body>
+</html>

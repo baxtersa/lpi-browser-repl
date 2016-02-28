@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+.options {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    background-color: #263238;
+    height: 36px;
+    border-bottom: 4px solid rgba(199, 146, 234, 1);
+    vertical-align: middle;
+    line-height: 36px;
+}
+
+.button {
+    color: rgba(237, 237, 237, 1);
+    cursor: pointer;
+    border-bottom: 4px solid rgba(237, 237, 237, 1);
+    float: right;
+    text-align: center;
+    width: 100px;
+}
+
+.button:hover {
+    color: #80cbc4;
+    border-bottom: 4px solid #80cbc4;
+}
+
+div {
+    display: block;
+}

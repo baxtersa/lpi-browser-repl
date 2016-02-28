@@ -1,0 +1,15 @@
+iframe {
+    border: none;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#input {
+    left: 0;
+}
+
+#output {
+    left: 50%;
+}
