@@ -19,9 +19,14 @@
     width: 100px;
 }
 
-.button:hover {
+.teal:hover {
     color: #80cbc4;
     border-bottom: 4px solid #80cbc4;
+}
+
+.purple:hover {
+    color: rgba(199, 146, 234, 1);
+    border-bottom: 4px solid rgba(199, 146, 234, 1);
 }
 
 div {

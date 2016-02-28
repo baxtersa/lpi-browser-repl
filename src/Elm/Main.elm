@@ -62,12 +62,12 @@ view address model =
   div
     [ Attrs.class "options" ]
     [ button
-        "button"
+        "button teal"
         "Type-check and evaluate the code (Cmd+Enter)"
         "Compile"
         compileMailbox.address
     , button
-        "button"
+        "button teal"
         "Clear code from the editor"
         "Clear"
         clearMailbox.address
