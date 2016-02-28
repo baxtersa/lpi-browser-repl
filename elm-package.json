@@ -1,7 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "A broser-based repl for a small dependently-typed language implemented in Ocaml,
-running on an Ocaml Http server built with Cohttp.",
+    "summary": "A broser-based repl for a small dependently-typed language implemented in Ocaml",
     "repository": "https://github.com/baxtersa/lpi-browser-repl.git",
     "license": "MIT",
     "source-directories": [
