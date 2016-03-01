@@ -13,7 +13,7 @@ import Skeleton exposing (skeleton)
 main : Html
 main =
   skeleton
-    "home"
+    "repl"
     [ splash ]
 
 
@@ -25,7 +25,7 @@ splash =
     , div [ size 26 8 ] [ text "A small dependently typed language in your browser" ]
     , div
         [ size 26 30 ]
-        [ a [ Attrs.href "index.html" ] [ text "repl" ] ]
+        [ a [ Attrs.href "/repl" ] [ text "repl" ] ]
     ]
 
 

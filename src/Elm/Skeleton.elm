@@ -21,10 +21,10 @@ header : String -> Html
 header name =
   div
     [ Attrs.id "nav-tabs" ]
-    [ a [ Attrs.href "home.html" ] [ text "home" ]
+    [ a [ Attrs.href "/" ] [ text "home" ]
     , ul
         []
-        (List.map (tab name) [ "repl" ])
+        (List.map (tab name) [ name ])
     ]
 
 
@@ -34,7 +34,7 @@ tab selected other =
     []
     [ a
         [ Attrs.classList [ "tab" => True, "current" => (selected == other) ]
-        , Attrs.href "index.html"
+        , Attrs.href ("/" ++ other)
         ]
         [ text other ]
     ]
