@@ -24,7 +24,7 @@ header name =
     [ a [ Attrs.href "/" ] [ text "home" ]
     , ul
         []
-        (List.map (tab name) [ name ])
+        (List.map (tab name) [ "repl" ])
     ]
 
 

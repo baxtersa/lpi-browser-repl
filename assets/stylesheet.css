@@ -1,11 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600);
 
 body {
-    font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande',
-    'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     background-color: #263238;
-    color: #293c4b;
+    color: rgb(233, 237, 237);;
 }
+
+/* Links */
 
 a {
     color: #80CBC4;
@@ -16,6 +17,8 @@ a:hover {
     text-decoration: underline;
     color: rgb(199, 146, 234)
 }
+
+/* Splash */
 
 #splash {
     padding: 1em;
@@ -29,12 +32,44 @@ a:hover {
     text-decoration: none;
     border-bottom: 3px solid #F77669;
     color: #F77669;
+    font-weight: 600;
 }
+
+/* Tabs */
+
+#nav-tabs {
+    padding: 1em;
+}
+
+#nav-tabs ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+#nav-tabs li {
+    display: inline-block;
+}
+
+.tab {
+    text-decoration: none;
+    padding-bottom: 13px;
+    margin: 0 1.5em;
+    font-size: 20px;
+}
+
+.tab:hover, .tab.current {
+    text-decoration: none;
+    border-bottom: 3px solid rgb(199, 146, 234);
+}
+
+/* Footer */
 
 .footer {
     text-align: center;
     margin-top: 6em;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid rgb(233, 237, 237);
     padding: 2em 0;
     color: #bbbbbb;
 }

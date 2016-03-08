@@ -13,7 +13,7 @@ import Skeleton exposing (skeleton)
 main : Html
 main =
   skeleton
-    "repl"
+    "home"
     [ splash ]
 
 
