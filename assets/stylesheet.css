@@ -56,11 +56,12 @@ a:hover {
     text-decoration: none;
     padding-bottom: 13px;
     margin: 0 1.5em;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .tab:hover, .tab.current {
     text-decoration: none;
+    color: rgb(199, 146, 234);
     border-bottom: 3px solid rgb(199, 146, 234);
 }
 
@@ -68,10 +69,10 @@ a:hover {
 
 .footer {
     text-align: center;
-    margin-top: 6em;
+    margin-top: 3em;
     border-top: 1px solid rgb(233, 237, 237);
     padding: 2em 0;
-    color: #bbbbbb;
+    color: rgb(233, 237, 237);
 }
 
 .purple-link {

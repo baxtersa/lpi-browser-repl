@@ -1,8 +1,14 @@
+#repl {
+    margin: 2em 0 0 0;
+    padding: 1em 0 0 0;
+    border-top: 1px solid rgb(233, 237, 237);
+}
+
 iframe {
     border: none;
     width: 50%;
-    height: 100%;
-    position: absolute;
+    height: 600px;
+    position: inherit;
     top: 0;
 }
 

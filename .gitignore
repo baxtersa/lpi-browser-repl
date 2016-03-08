@@ -2,4 +2,5 @@ elm-stuff/*
 src/codemirror-5.12/*
 src/JS/elm.js
 src/JS/home.js
-home.html
+src/JS/features.js
+src/JS/repl.js

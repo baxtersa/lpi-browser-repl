@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>TryDepuTy</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="/assets/stylesheet.css">
+    <link rel="stylesheet" href="/assets/style.css">
   </head>
   <body>
-    <iframe id="input" name="input" src="/editor"></iframe>
-    <iframe id="output" name="output" src="/editor"></iframe>
+    <script src="/src/JS/repl.js"></script>
+    <script>var runningElmModule = Elm.fullscreen(Elm.Repl);</script>
   </body>
 </html>
