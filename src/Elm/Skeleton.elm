@@ -45,5 +45,9 @@ footer =
   div
     [ Attrs.class "footer" ]
     [ text "Code for this site is open source under MIT License and can be found at\n"
-    , a [ Attrs.href "http://github.com/baxtersa" ] [ text "http://github.com/baxtersa" ]
+    , a
+        [ Attrs.href "http://github.com/baxtersa"
+        , Attrs.class "purple-link"
+        ]
+        [ text "http://github.com/baxtersa" ]
     ]
