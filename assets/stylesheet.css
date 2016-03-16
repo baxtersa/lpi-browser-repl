@@ -6,6 +6,12 @@ body {
     color: rgb(233, 237, 237);;
 }
 
+/* Headers */
+
+h1 {
+    font-size: 3em;
+}
+
 /* Links */
 
 a {

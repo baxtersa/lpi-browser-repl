@@ -3,6 +3,7 @@ lpi-server
 src/codemirror-5.12/*
 src/JS/elm.js
 src/JS/home.js
+src/JS/author.js
 src/JS/features.js
 src/JS/repl.js
 src/Backend/*.cm*
