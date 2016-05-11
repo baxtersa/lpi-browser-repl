@@ -1,4 +1,4 @@
-module Skeleton (skeleton) where
+module Skeleton exposing (skeleton)
 
 import VirtualDom exposing (Node)
 import Html exposing (div, a, ul, li, text, Html)
@@ -10,14 +10,14 @@ import Html.Attributes as Attrs
   (,)
 
 
-skeleton : String -> List Node -> Html
+skeleton : String -> List (Node msg) -> Html msg
 skeleton name content =
   div
     []
     (header name :: content ++ [ footer ])
 
 
-header : String -> Html
+header : String -> Html msg
 header name =
   div
     [ Attrs.id "nav-tabs" ]
@@ -28,7 +28,7 @@ header name =
     ]
 
 
-tab : String -> String -> Html
+tab : String -> String -> Html msg
 tab selected other =
   li
     []
@@ -40,7 +40,7 @@ tab selected other =
     ]
 
 
-footer : Html
+footer : Html msg
 footer =
   div
     [ Attrs.class "footer" ]

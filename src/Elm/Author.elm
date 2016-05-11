@@ -1,4 +1,4 @@
-module Author (..) where
+module Author exposing (..)
 
 import Html exposing (div, h1, text, a, p, ul, li, span, Html, Attribute)
 import Html.Attributes as Attrs
@@ -10,7 +10,7 @@ import Skeleton exposing (skeleton)
   (,)
 
 
-main : Html
+main : Html msg
 main =
   skeleton
     "author"
@@ -20,14 +20,14 @@ main =
     ]
 
 
-nav : Html
+nav : Html msg
 nav =
   div
     [ Attrs.id "nav" ]
     []
 
 
-bio : Html
+bio : Html msg
 bio =
   div
     [ Attrs.id "bio" ]
@@ -47,7 +47,7 @@ bio =
     ]
 
 
-links : Html
+links : Html msg
 links =
   div
     [ Attrs.id "links" ]
@@ -82,7 +82,7 @@ links =
     ]
 
 
-link_item : List Html -> Html
+link_item : List (Html msg) -> Html msg
 link_item item =
   span
     [ Attrs.style

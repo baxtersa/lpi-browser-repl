@@ -1,4 +1,4 @@
-module Home (..) where
+module Home exposing (..)
 
 import Html exposing (div, a, text, Html, Attribute)
 import Html.Attributes as Attrs
@@ -10,14 +10,14 @@ import Skeleton exposing (skeleton)
   (,)
 
 
-main : Html
+main : Html msg
 main =
   skeleton
     "home"
     [ splash ]
 
 
-splash : Html
+splash : Html msg
 splash =
   div
     [ Attrs.id "splash" ]
@@ -29,7 +29,7 @@ splash =
     ]
 
 
-size : a -> b -> Attribute
+size : a -> b -> Attribute msg
 size height padding =
   Attrs.style
     [ "font-size" => (toString height ++ "px")
