@@ -1,28 +1,19 @@
-module Main (..) where
+port module Main exposing (..)
 
 import Html exposing (div, p, text, Html, node)
+import Html.App as Html
 import Html.Attributes as Attrs
 import Html.Events as Events
-import Signal exposing (map, mailbox, foldp, Mailbox, Address)
 
 
-main : Signal Html
+main : Program Never
 main =
-  Signal.map (view actions.address) model
-
-
-
--- ACTIONS
-
-
-type Action
-  = NoOp
-
-
-actions : Mailbox Action
-actions =
-  Signal.mailbox NoOp
-
+  Html.program
+      { init = init
+      , view = view
+      , update = update
+      , subscriptions = always Sub.none
+      }
 
 
 -- MODEL
@@ -37,63 +28,62 @@ initialModel =
   {}
 
 
-model : Signal Model
-model =
-  Signal.foldp update initialModel actions.signal
+init : ( Model, Cmd msg )
+init =
+  ( initialModel, Cmd.none )
 
+
+-- MSG
+
+
+type Msg
+  = NoOp
+  | Compile
+  | Clear
 
 
 -- VIEW
 
 
-button : String -> String -> String -> Address () -> Html
-button class title prompt address =
+button : String -> String -> String -> Msg -> Html Msg
+button class title prompt msg =
   div
     [ Attrs.class class
     , Attrs.title title
-    , Events.onClick address ()
+    , Events.onClick msg
     ]
     [ text prompt
     ]
 
 
-view : Address Action -> Model -> Html
-view address model =
+view : Model -> Html Msg
+view model =
   div
     [ Attrs.class "options" ]
     [ button
         "button teal"
         "Type-check and evaluate the code (Cmd+Enter)"
         "Compile"
-        compileMailbox.address
+        Compile
     , button
         "button teal"
         "Clear code from the editor"
         "Clear"
-        clearMailbox.address
+        Clear
     ]
 
 
-update : Action -> Model -> Model
-update action model =
-  model
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+  case msg of
+    NoOp ->
+      ( model, Cmd.none )
+    Compile ->
+      ( model, compile () )
+    Clear ->
+      ( model, clear () )
 
 
-compileMailbox : Mailbox ()
-compileMailbox =
-  Signal.mailbox ()
+port compile : () -> Cmd msg
 
-
-clearMailbox : Mailbox ()
-clearMailbox =
-  Signal.mailbox ()
-
-
-port compile : Signal ()
-port compile =
-  compileMailbox.signal
-
-
-port clear : Signal ()
-port clear =
-  clearMailbox.signal
+port clear : () -> Cmd msg

@@ -12,7 +12,7 @@ var editor;
 
 function initEditor() {
     var controlsDiv = document.getElementById("controls");
-    var controls = Elm.embed(Elm.Main, controlsDiv);
+    var controls = Elm.Main.embed(controlsDiv);
 
     controls.ports.compile.subscribe(compile);
     controls.ports.clear.subscribe(clear);
